@@ -10,7 +10,7 @@ ENCODED_SERVICE_KEY = userkey.encSvcKey
 NUM_OF_ROWS = 300
 TIMEOUT = 1000
 
-#연관판결 추출
+# 연관판결 추출
 regex = re.compile(r'(?:연관판결 \: )(.*)(?: ){3,}')
 
 
@@ -104,7 +104,6 @@ def get_all_cases_counts():
 # 타입별 사건 상세 내용 조회
 def get_cases_for_types(counts_for_cases):
     detail_url = BASE_URL + 'getSjPrecedentNaeyongPstate?ServiceKey={}&kindA={}&kindB={}&kindC={}&numOfRows={}&pageNo={}'
-    related_key = '연관판결 : '  # 연관판결 정보 포함 여부 확인 키워드
     details_list = []
     for case in counts_for_cases:
         # 사건 개수가 0이면 다음 사건 확인
