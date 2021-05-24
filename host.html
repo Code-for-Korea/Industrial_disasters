@@ -1,0 +1,30 @@
+<!--
+    Code for Korea - 산업재해 채널 
+    산업재해 판결문 열람 프로젝트
+    질병코드 선택 모듈 개발
+
+    사용법
+    1. Code.html의 URL을 popup_code_win의 인자로 넣어 Code picker 창을 띄운다. 창을 띄우는 방법은 자유롭게 해도 된다. 
+    2. Code picker에서 선택 된 값은, 이 창의 id='disease_code'인 Element에 입력 된다.
+-->
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>HostPage</title>
+    <script type="text/javascript">
+        function popup_code_win(code_popup_url)
+        {
+            window.open(code_popup_url,
+                    'code_window', 
+                    'left=500, top=300, width=750, height=800, resizable = no, scrollbars = yes');    
+        }
+    </script>
+</head>
+<body>
+    <h1>This is the Host Page.</h1>
+    Disease code : <input type="text" id="disease_code" style=" width:300px;"> &nbsp; <input type="button" value="질병코드 선택" onclick="popup_code_win('https://code-for-korea.github.io/Industrial_disasters/CodePicker/code.html')"><br>
+</body>
+</html>
