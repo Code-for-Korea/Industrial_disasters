@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Code Picker</title>
+    <script type="text/javascript">
+        function set_host_disease_code()
+        {
+             opener.document.getElementById("disease_code").value = document.getElementById("code_text").value;
+             window.close();
+        }
+   </script>
+</head>
+<body>
+    <h1>Disease Code Picker</h1> 
+    <input type="text" id="code_text"> <input type="button" value="Select" onclick="set_host_disease_code()">
+</body>
+</html>

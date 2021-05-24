@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>HostPage</title>
+    <script type="text/javascript">
+        let codeWin;    
+        function popup_code_win(code_popup_url)
+        {
+            // This window
+            window.name = "host_window";
+            // window.open("open할 window", "자식창 이름", "팝업창 옵션");
+            codeWin = window.open(code_popup_url,
+                    'code_window', 
+                    'width=700, height=800, resizable = no, scrollbars = yes');    
+        }
+    </script>
+</head>
+<body>
+    <h1>This is the Host Page.</h1>
+    Disease code : <input type="text" id="disease_code"><input type="button" value="..." onclick="popup_code_win('http://localhost:8888/code.html')"><br>
+</body>
+</html>
